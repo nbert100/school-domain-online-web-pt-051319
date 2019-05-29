@@ -35,3 +35,6 @@ class School
     end
   end
 end
+
+school_one = School.new("Cardozo High School")
+puts school_one
