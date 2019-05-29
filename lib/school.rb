@@ -36,5 +36,5 @@ attr_accessor :name, :roster
   end
 end
 
-school_one = School.new("Cardozo High School")
-puts school_one.name
+# school_one = School.new("Cardozo High School")
+# puts school_one.name
