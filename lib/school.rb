@@ -37,4 +37,4 @@ class School
 end
 
 school_one = School.new("Cardozo High School")
-puts school_one
+puts school_one.sort
