@@ -11,21 +11,21 @@ class School
     @roster
   end
   
- # def add_student(student, grade)
-  #  @student = student
-   # @grade = grade
-    #roster[grade] = []
-    #roster[grade] << student
-    
-  #end
-   def add_student(student, grade)
+  def add_student(student, grade)
     @student = student
     @grade = grade
-    if @roster.include?(grade) == false
-      @roster[grade] = []
-    end
-    @roster[grade] << student
+    roster[grade] = []
+    roster[grade] << student
+    
   end
+  # def add_student(student, grade)
+  #   @student = student
+  #   @grade = grade
+  #   if @roster.include?(grade) == false
+  #     @roster[grade] = []
+  #   end
+  #   @roster[grade] << student
+  # end
   
   def grade(grade) 
     @roster[grade]
