@@ -1,6 +1,6 @@
 require 'pry'
 class School
-
+attr_accessor :name, :roster
   
   def initialize(name)
     @name = name
@@ -11,21 +11,19 @@ class School
     @roster
   end
   
- # def add_student(student, grade)
-  #  @student = student
-   # @grade = grade
-    #roster[grade] = []
-    #roster[grade] << student
-    
-  #end
-   def add_student(student, grade)
-    @student = student
-    @grade = grade
-    if @roster.include?(grade) == false
-      @roster[grade] = []
-    end
+  def add_student(student, grade)
+    @roster[grade] ||= []
     @roster[grade] << student
+    
   end
+  # def add_student(student, grade)
+  #   @student = student
+  #   @grade = grade
+  #   if @roster.include?(grade) == false
+  #     @roster[grade] = []
+  #   end
+  #   @roster[grade] << student
+  # end
   
   def grade(grade) 
     @roster[grade]
@@ -37,3 +35,6 @@ class School
     end
   end
 end
+
+# school_one = School.new("Cardozo High School")
+# puts school_one.name
